@@ -1,2 +1,0 @@
-== Sample One Month Rails App
-##Josemar da Costa Magalhaes
