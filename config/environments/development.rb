@@ -37,4 +37,13 @@ Onrails::Application.configure do
   
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   Paperclip.options[:command_path] = "/usr/local/bin/"
+  # paperclip should use amazon s3 on heroku
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :s3_credentials => {
+      :bucket => "omrails-kindelbit",
+      :access_key_id => "AKIAJP5H5J5UCUKDBZCQ",
+      :secret_access_key => "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"
+    }
+  }
 end
