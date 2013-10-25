@@ -72,9 +72,9 @@ Onrails::Application.configure do
   config.paperclip_defaults = {
     :storage => :s3,
     :s3_credentials => {
-      :bucket => "omrails-kindelbit",
-      :access_key_id => "AKIAJP5H5J5UCUKDBZCQ",
-      :secret_access_key => "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"
+      :bucket => ENV['S3_BUCKET_NAME'],
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
     }
   }
 
